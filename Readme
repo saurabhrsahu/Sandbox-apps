@@ -1,0 +1,56 @@
+# Sandbox Apps
+
+This repository contains sample applications across multiple languages for testing deployments and practicing modern delivery workflows.
+
+It is designed as a hands-on sandbox for CI/CD learning, including build and release automation, deployment strategies, containerization (Docker/Kubernetes-style workflows), environment validation, and broader DevOps experimentation.
+
+## Purpose
+
+- Practice end-to-end CI/CD pipelines
+- Validate deployment approaches in safe sample projects
+- Experiment with containerization and runtime environments
+- Learn release engineering basics (build, test, package, deploy)
+- Try infrastructure and automation ideas without production risk
+
+## Repository Structure
+
+- `C/` - sample C projects
+- `Cpp/` - sample C++ projects
+- `CSharp/` - sample C# projects
+- `Bash/` - shell scripting and automation samples
+- `Dart/` - sample Dart projects
+- `Go/` - sample Go services and apps
+- `Java/` - sample Java applications
+- `Javascript/` - sample JavaScript apps
+- `Kotlin/` - sample Kotlin projects
+- `PHP/` - sample PHP projects
+- `Python/` - sample Python services/scripts
+- `Ruby/` - sample Ruby projects
+- `Rust/` - sample Rust projects
+- `Scala/` - sample Scala projects
+- `Swift/` - sample Swift projects
+- `Typescript/` - sample TypeScript apps
+
+## What You Can Practice Here
+
+- CI pipeline setup (lint, test, build stages)
+- CD workflows (staging and production-style deployments)
+- Branch-based and trunk-based deployment models
+- Docker image build, tagging, and push flows
+- Basic Kubernetes-style deployment patterns
+- Environment variable and secret handling approaches
+- Rollback and recovery drills
+
+## Suggested Workflow
+
+1. Pick any app folder.
+2. Add or run tests locally.
+3. Containerize the app (if not already containerized).
+4. Create or update CI pipeline config.
+5. Add deployment automation (staging first, then production-style simulation).
+6. Validate logs, health checks, and rollback strategy.
+
+## Notes
+
+- This is a practice repository and may include intentionally simple examples.
+- Use it to iterate quickly on deployment and automation techniques.
