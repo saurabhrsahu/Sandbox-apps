@@ -1,0 +1,47 @@
+# Git metadata (not needed inside the image)
+.git
+.gitattributes
+**/.git
+
+# Virtual environments and Python bytecode
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Test, type-check, and lint caches (not needed at runtime)
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Tests are run in CI, not shipped in the production image
+tests/
+pytest.ini
+
+# Secrets and local env (never copy into build context)
+.env
+.env.*
+!.env.example
+
+# Local SQLite / dev data (container uses empty /app/data or env DATABASE_URL)
+data/
+*.db
+*.sqlite3
+
+# Editor / OS junk
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

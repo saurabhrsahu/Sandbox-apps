@@ -61,6 +61,7 @@ __pycache__/
 .Python
 *.so
 
+# Tests & type check / lint caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -72,12 +73,14 @@ htmlcov/
 coverage.xml
 *.cover
 
+# Virtual environments
 .venv/
 venv/
 ENV/
 env.bak/
 venv.bak/
 
+# Packaging / build (PulseBoard & generic Python)
 *.egg
 *.egg-info/
 .eggs/
