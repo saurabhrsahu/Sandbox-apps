@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+
+  --color-bloom-canvas: oklch(98.4% 0.012 75);
+  --color-bloom-foreground: oklch(26% 0.04 285);
+  --color-bloom-muted: oklch(52% 0.04 285);
+  --color-bloom-accent: oklch(62% 0.18 25);
+  --color-bloom-moss: oklch(62% 0.12 165);
+  --color-bloom-sky: oklch(78% 0.1 240);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+.display-serif {
+  font-family: var(--font-display);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+}
