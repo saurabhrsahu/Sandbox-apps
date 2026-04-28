@@ -1,0 +1,141 @@
+# -----------------------------
+# OS / Editor
+# -----------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+.idea/
+.vscode/
+*.code-workspace
+
+# -----------------------------
+# Environment / Secrets
+# -----------------------------
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+# -----------------------------
+# Logs / Temp
+# -----------------------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# -----------------------------
+# Generic build / cache
+# -----------------------------
+dist/
+build/
+target/
+bin/
+obj/
+coverage/
+.cache/
+
+# -----------------------------
+# Java / JVM
+# -----------------------------
+**/out/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.gradle/
+
+# -----------------------------
+# JavaScript / TypeScript / Node
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.next/
+.nuxt/
+.svelte-kit/
+*.tsbuildinfo
+
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Tests & type check / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.hypothesis/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Packaging / build (PulseBoard & generic Python)
+*.egg
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+build/
+dist/
+*.manifest
+
+# Tooling & env files (PulseBoard uses pydantic-settings / .env)
+# Local DB & runtime (PulseBoard default SQLite under Python/data/)
+Python/data/
+*.sqlite3
+
+# Jupyter / IPython (if you add notebooks later)
+.ipynb_checkpoints/
+
+# -----------------------------
+# Go
+# -----------------------------
+*.test
+cover.out
+
+# -----------------------------
+# Rust
+# -----------------------------
+**/target/
+
+# -----------------------------
+# .NET / C#
+# -----------------------------
+*.user
+*.suo
+*.userprefs
+
+# -----------------------------
+# Terraform / IaC (optional)
+# -----------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
