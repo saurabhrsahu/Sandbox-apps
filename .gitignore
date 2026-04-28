@@ -70,14 +70,50 @@ pnpm-debug.log*
 # Python
 # -----------------------------
 __pycache__/
+**/__pycache__/
 *.py[cod]
+*$py.class
 *.pyo
 *.pyd
+.Python
+*.so
+
+# Tests & type check / lint caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.hypothesis/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Virtual environments
 .venv/
 venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Packaging / build (PulseBoard & generic Python)
+*.egg
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+build/
+dist/
+*.manifest
+
+# Tooling & env files (PulseBoard uses pydantic-settings / .env)
+# Local DB & runtime (PulseBoard default SQLite under Python/data/)
+Python/data/
+*.sqlite3
+
+# Jupyter / IPython (if you add notebooks later)
+.ipynb_checkpoints/
 
 # -----------------------------
 # Go
