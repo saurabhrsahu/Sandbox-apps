@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+/* Design tokens: observability / glass console */
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-canvas: oklch(98% 0.01 264);
+  --color-surface: oklch(100% 0 0 / 0.72);
+  --color-surface-elevated: oklch(99% 0.006 264);
+  --color-border: oklch(92% 0.02 264);
+  --color-muted: oklch(48% 0.03 264);
+  --color-foreground: oklch(22% 0.04 264);
+  --color-accent: oklch(62% 0.22 262);
+  --color-accent-foreground: oklch(99% 0 0);
+  --color-success: oklch(64% 0.17 155);
+  --color-warning: oklch(76% 0.15 75);
+  --color-danger: oklch(58% 0.2 25);
+
+  --shadow-glass: 0 1px 2px oklch(15% 0.02 264 / 0.06), 0 22px 44px -28px oklch(20% 0.03 264 / 0.35);
+  --shadow-glow-accent: 0 0 60px -12px oklch(62% 0.22 262 / 0.45);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --color-canvas: oklch(17% 0.03 264);
+  --color-surface: oklch(21% 0.03 264 / 0.76);
+  --color-surface-elevated: oklch(23% 0.032 264);
+  --color-border: oklch(32% 0.03 264);
+  --color-muted: oklch(68% 0.02 264);
+  --color-foreground: oklch(96% 0.01 264);
+  --color-accent: oklch(73% 0.18 262);
+  --shadow-glass:
+    0 1px 1px oklch(5% 0.02 264 / 0.45), 0 30px 60px -32px oklch(8% 0.02 264 / 0.9);
+  --shadow-glow-accent: 0 0 80px -20px oklch(73% 0.18 262 / 0.55);
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  background:
+    radial-gradient(1200px circle at 10% -10%, oklch(62% 0.22 262 / 0.12), transparent 52%),
+    radial-gradient(900px circle at 94% 8%, oklch(70% 0.15 295 / 0.09), transparent 45%),
+    var(--color-canvas);
+}
+
+.dark body {
+  background:
+    radial-gradient(1100px circle at 8% -8%, oklch(62% 0.22 262 / 0.18), transparent 52%),
+    radial-gradient(800px circle at 94% 0%, oklch(55% 0.18 300 / 0.12), transparent 42%),
+    var(--color-canvas);
+}
+
+@layer utilities {
+  .glass-panel {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid color-mix(in oklch, var(--color-border) 88%, transparent);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
