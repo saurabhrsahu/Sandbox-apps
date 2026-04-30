@@ -109,19 +109,39 @@ pnpm-debug.log*
 .svelte-kit/
 .vite/
 *.tsbuildinfo
+.eslintcache
+.parcel-cache
 
 # -----------------------------------------------------------------------------
-# Java / JVM
+# Java / Gradle / Scala · sbt
 # -----------------------------------------------------------------------------
 **/out/
+.project
+.classpath
+.settings/
+.factorypath
+
+# Scala sbt (+ Maven/T Gradle) builds — also covers Cargo `target/` for Rust crates
 target/
+.scala-build/
+
+# Metals / BSP / Bloop (Scala editors & tooling)
+.metals/
+.bsp/
+.bloop/
+
 *.class
 *.jar
 *.war
 *.ear
 *.iml
 .gradle/
+gradle-app.setting
 build/
+
+# HotSpot crash logs from local JVM runs
+hs_err_pid*
+replay_pid*
 
 # -----------------------------------------------------------------------------
 # Go
@@ -139,8 +159,8 @@ cover.out
 # -----------------------------------------------------------------------------
 # Rust
 # -----------------------------------------------------------------------------
-**/target/
-# Commit Cargo.lock for applications; ignore only target/
+# `target/` is ignored globally under JVM · Scala · sbt section above.
+# Commit Cargo.lock for applications/bins where you pin deps; ignore binaries only via target/.
 
 # -----------------------------------------------------------------------------
 # .NET / C#
