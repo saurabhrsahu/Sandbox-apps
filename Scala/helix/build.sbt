@@ -14,7 +14,7 @@ val Http4sVer = "0.23.29"
 val CirceVer = "0.14.13"
 
 lazy val root = (project in file(".")).settings(
-  name := "aurora-atelier",
+  name := "helix-dispatch",
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-effect" % "3.5.5",
     "org.http4s" %% "http4s-ember-server" % Http4sVer,
